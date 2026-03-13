@@ -1,8 +1,8 @@
-# 🎬 TikTok Video Generator
+# 🎬 TikTok video generator
 
 An automated end-to-end system designed for the mass creation of vertical video content (TikTok/Reels/Shorts format). This project integrates Generative Artificial Intelligence, speech synthesis, and multimedia processing to transform simple text ideas into complete audiovisual productions without human intervention.
 
-## 🚀 Main Features
+## 🚀 Main features
 
 * **Intelligent scripting (GenAI):** Integration with **Google Gemini 2.5 Flash** to generate structured scripts, optimized for audience retention.
 * **Realistic narration (TTS):** Implementation of **Edge TTS** to generate natural and emotive voiceovers in neutral Spanish.
@@ -11,7 +11,7 @@ An automated end-to-end system designed for the mass creation of vertical video 
 * **Batch processing:** Robust queue system capable of processing multiple topics sequentially, managing states (pending vs. processed).
 * **Asynchronous architecture:** Use of `asyncio` to optimize blocking I/O operations such as audio generation.
 
-## 🛠️ Technology Stack
+## 🛠️ Technology stack
 
 This project demonstrates competencies in the following technologies and libraries:
 
@@ -21,7 +21,7 @@ This project demonstrates competencies in the following technologies and librari
 * **Concurrency:** AsyncIO (asynchronous programming).
 * **File management:** JSON, OS, Glob.
 
-## ⚙️ Workflow Architecture
+## ⚙️ Workflow architecture
 
 The script follows a linear pipeline pattern with exception handling:
 
@@ -60,13 +60,13 @@ To run this project locally, you need:
 * `GEMINI_API_KEY`: Your Google AI Studio API key.
 * `PEXELS_API_KEY`: Your Pexels API key.
 
-### Dependency Installation
+### Dependency installation
 
 ```bash
 pip install google-genai edge-tts requests mutagen
 ```
 
-## 📂 Project Structure
+## 📂 Project structure
 
 ```text
 ├── background_music/      # Library of .mp3 audio tracks
@@ -78,7 +78,7 @@ pip install google-genai edge-tts requests mutagen
 └── README.md              # Documentation
 ```
 
-## 💡 Overcome Challenges and Learnings
+## 💡 Overcome challenges and learnings
 
 During the development of this tool, key technical challenges were resolved:
 
@@ -86,7 +86,7 @@ During the development of this tool, key technical challenges were resolved:
 * **API error handling:** Implementation of "fallback" mechanisms when the Pexels API does not find exact matches for complex terms.
 * **FFmpeg optimization:** Construction of complex filtering commands (`filter_complex`) to mix audio and video in a single render pass, reducing processing time.
 
-## 🔮 Future Improvements
+## 🔮 Future improvements
 
 * Implementation of automatic subtitles (burn-in subtitles) synchronized with the audio.
 * Integration with the YouTube Data API for automatic uploading of generated videos.
