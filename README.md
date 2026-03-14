@@ -25,27 +25,30 @@ This project demonstrates competencies in the following technologies and librari
 
 The script follows a linear pipeline pattern with exception handling:
 
-1. **Ingestion:** Reads a topic from `pending_topics.txt`.
-2. **Content generation:** Queries the Gemini API to get a JSON script with time segments and visual descriptions.
+1. **Ingestion:**
+* Reads a topic from `pending_topics.txt`.
 
-3. **Audio synthesis:** Converts the text of each segment into individual `.mp3` files.
+2. **Content generation:**
+* Queries the Gemini API to get a JSON script with time segments and visual descriptions.
+
+3. **Audio synthesis:**
+* Converts the text of each segment into individual `.mp3` files.
+
 4. **Media acquisition:**
-
 * Iterates over each audio segment.
 * Searches Pexels for vertical videos matching the "visual description" suggested by the AI.
 * Filters results by duration and quality (minimum 1080p).
 
 5. **Assembly (rendering):**
-
 * Concatenates Audio+Video pairs using FFmpeg.
 * Applies crop filters to ensure the 9:16 aspect ratio.
 
 6. **Post-production:**
-
 * Adds a random music track from the local library.
 * Adjusts volume levels (voice and background mix).
 
-7. **Finalization:** Moves the rendered video to the output folder and updates the records of processed topics.
+7. **Finalization:**
+* Moves the rendered video to the output folder and updates the records of processed topics.
 
 ## 📋 Prerequisites
 
@@ -54,7 +57,6 @@ To run this project locally, you need:
 1. **Python 3.8+** installed.
 2. **FFmpeg** installed and added to the system PATH.
 3. Environment variables configured:
-
 * `GEMINI_API_KEY`: Your Google AI Studio API key.
 * `PEXELS_API_KEY`: Your Pexels API key.
 
